@@ -78,9 +78,19 @@ $ sysctl wfq.port_thresh
 </code></pre>
 </li>
 
-<li>Per-queue ECN marking threshold (byte) (i is index starting from 0):
+<li>Per-queue ECN marking threshold (byte) (i is queue index starting from 0):
 <pre><code>$ sysctl dwrr.queue_thresh_i
 $ sysctl wfq.queue_thresh_i
+</code></pre>
+</li>
+
+<li>Per-queue priority (i is queue index starting from 0):
+<pre><code>$ sysctl dwrr.queue_prio_i
+$ sysctl wfq.queue_prio_i
+</code></pre>
+To enable the highest priority (priority 0) for queue 0:
+<pre><code>$ sysctl -w dwrr.queue_prio_0=0
+$ sysctl -w wfq.queue_prio_0=0
 </code></pre>
 </li>
 
