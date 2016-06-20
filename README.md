@@ -72,19 +72,19 @@ $ sysctl -w wfq.ecn_scheme=5
 </code></pre>
 </li>
 
-<li>Per-port ECN marking threshold (bytes):
+<li>Per-port ECN marking threshold (byte):
 <pre><code>$ sysctl dwrr.port_thresh
 $ sysctl wfq.port_thresh
 </code></pre>
 </li>
 
-<li>Per-queue ECN marking threshold (bytes) (i is index starting from 0):
+<li>Per-queue ECN marking threshold (byte) (i is index starting from 0):
 <pre><code>$ sysctl dwrr.queue_thresh_i
 $ sysctl wfq.queue_thresh_i
 </code></pre>
 </li>
 
-<li>Per-port shared buffer size (bytes):
+<li>Per-port shared buffer size (byte):
 <pre><code>$ sysctl dwrr.shared_buffer
 $ sysctl wfq.shared_buffer
 </code></pre>
@@ -95,4 +95,17 @@ $ sysctl wfq.shared_buffer
 $ sysctl wfq.tcn_thresh
 </code></pre>
 </li>
+
+<li>CoDel target (1024 ns):
+<pre><code>$ sysctl dwrr.codel_target 
+$ sysctl wfq.codel_target 
+</code></pre>
+</li>
+
+<li>CoDel interval (1024 ns):
+<pre><code>$ sysctl dwrr.codel_interval
+$ sysctl wfq.codel_interval 
+</code></pre>
+</li>
+
 </ul>
